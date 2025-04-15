@@ -1,0 +1,557 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #6b48ff, #ff4d94);
+    color: white;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+header {
+    margin-bottom: 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .ghmc {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+}
+
+h1, h2 {
+    color: white !important;
+}
+
+body.dashboard-page h2 {
+    color: #333 !important;
+}
+
+body.track-page h2 {
+    color: #333 !important;
+}
+
+body.login-page h2 {
+    color: #333 !important;
+}
+
+nav a, .logout-btn {
+    color: #333;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    background: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background 0.3s, opacity 0.3s;
+    font-weight: bold;
+}
+
+nav a:hover, .logout-btn:hover {
+    background: #f0f0f0;
+    color: #333;
+}
+
+body.login-page, body.dashboard-page, body.track-page {
+    color: #333;
+}
+
+body.login-page header h1,
+body.dashboard-page header h1,
+body.track-page header h1 {
+    color: white;
+}
+
+body.login-page header .ghmc,
+body.dashboard-page header .ghmc,
+body.track-page header .ghmc {
+    color: #333;
+}
+
+main {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 2rem;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+body.login-page main,
+body.dashboard-page main,
+body.track-page main {
+    background: white;
+    border: 2px solid black;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: #333;
+}
+
+.login-form, .dashboard, .track-issues {
+    background: white;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: #333;
+}
+
+.dashboard {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.hero {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    color: #e0e0e0;
+    margin-bottom: 2rem;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+    margin-bottom: 4rem;
+    flex-wrap: wrap;
+}
+
+.stat-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1.5rem;
+    border-radius: 15px;
+    text-align: center;
+    flex: 1;
+    min-width: 200px;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.stat-card i {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: white;
+}
+
+.stat-card h3 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: white;
+}
+
+.stat-card p {
+    font-size: 1rem;
+    color: #e0e0e0;
+}
+
+.report-form {
+    background: white;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: #333;
+}
+
+.report-form h2 {
+    color: #333 !important;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.report-form .submit-btn {
+    display: block;
+    margin: 1rem auto 0;
+    width: auto;
+}
+
+.login-form .submit-btn {
+    display: block;
+    margin: 1rem auto 0;
+    width: auto;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+select, input, textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: 2px solid black;
+    background: white;
+    color: #333;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+select:focus, input:focus, textarea:focus {
+    outline: none;
+    border-color: #6b48ff;
+    box-shadow: 0 0 5px rgba(107, 72, 255, 0.3);
+}
+
+textarea {
+    resize: vertical;
+}
+
+option {
+    background: white;
+    color: #333;
+}
+
+.photo-upload {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: white;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    border: 2px solid black;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.photo-upload:hover {
+    background: #f0f0f0;
+}
+
+.photo-upload span {
+    color: #333;
+}
+
+.photo-upload input {
+    display: none;
+}
+
+.photo-limit {
+    font-size: 0.8rem;
+    color: #666;
+    margin-left: 1rem;
+}
+
+.photo-previews {
+    margin-top: 1rem;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.photo-previews img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 5px;
+    border: 2px solid black;
+}
+
+.photo-previews button {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background: #ff4444;
+    border: none;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    color: white;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.submit-btn, button[type="submit"] {
+    background: #3498db;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, opacity 0.3s;
+}
+
+.submit-btn:hover, button[type="submit"]:hover {
+    background: #2980b9;
+    color: white;
+}
+
+body.login-page .login-form button[type="submit"] {
+    background: #3498db;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, opacity 0.3s;
+}
+
+body.login-page .login-form button[type="submit"]:hover {
+    background: #2980b9;
+    color: white;
+}
+
+.citizen-track .submit-btn {
+    background: #3498db;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, opacity 0.3s;
+}
+
+.citizen-track .submit-btn:hover {
+    background: #2980b9;
+    color: white;
+}
+
+.report-btn, .logout-btn {
+    background: white;
+    color: #333;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, opacity 0.3s;
+}
+
+.report-btn:hover, .logout-btn:hover {
+    background: #f0f0f0;
+    color: #333;
+}
+
+.clear-btn {
+    background: #3498db;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, opacity 0.3s;
+    margin: 0;
+    align-self: flex-start;
+}
+
+.clear-btn:hover {
+    background: #2980b9;
+    color: white;
+}
+
+.error-message {
+    color: #ff4444;
+    text-align: center;
+    margin-top: 0.5rem;
+}
+
+.success-message {
+    color: #2ecc71; /* Green for success */
+    text-align: center;
+    margin-top: 0.5rem;
+}
+
+.issues-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+}
+
+body .issue-card {
+    background: white;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    color: #333;
+}
+
+body .issue-card .details {
+    color: #333;
+}
+
+body .issue-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+body .status {
+    color: #333;
+}
+
+body.dashboard-page .issue-card,
+body.track-page .issue-card {
+    background: white;
+    color: #333;
+}
+
+body.dashboard-page .issue-card .details,
+body.track-page .issue-card .details {
+    color: #333;
+}
+
+body.dashboard-page .issue-card h3,
+body.track-page .issue-card h3 {
+    color: white;
+}
+
+.status {
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    margin-right: 0.5rem;
+    display: inline-block;
+}
+
+.pending { background: #ffd700; color: #333; }
+.in-progress { background: #3498db; color: white; }
+.resolved { background: #2ecc71; color: white; }
+
+.issue-photos {
+    margin-top: 0.5rem;
+    display: flex;
+    gap: 0.5rem;
+}
+
+body .issue-photos img,
+body.dashboard-page .issue-photos img,
+body.track-page .issue-photos img {
+    border: 2px solid black;
+}
+
+.issue-photos img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.status-select {
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: none;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    cursor: pointer;
+}
+
+body.dashboard-page .status-select,
+body.track-page .status-select {
+    background: white;
+    color: #333;
+    border: 2px solid black;
+}
+
+.filter-search {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.filter-search .form-group {
+    flex: 1;
+    min-width: 200px;
+}
+
+.citizen-track .form-group {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-end;
+}
+
+.citizen-track .form-group input {
+    flex: 1;
+}
+
+.citizen-track .form-group button {
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+/* Feedback form styling */
+.feedback-form {
+    margin-top: 1rem;
+    padding: 1rem;
+    background: white;
+    border: 2px solid black;
+    border-radius: 5px;
+    color: #333;
+}
+
+.feedback-form h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.feedback-form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: 2px solid black;
+    background: white;
+    color: #333;
+    font-size: 1rem;
+    box-sizing: border-box;
+    margin-bottom: 0.5rem;
+}
+
+.feedback-form .submit-btn {
+    display: block;
+    margin: 0 auto;
+}
+
+/* Feedback display in admin dashboard */
+.feedback-display {
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    background: #f0f0f0;
+    border-radius: 5px;
+    color: #333;
+    font-style: italic;
+}
+
+::-webkit-input-placeholder { color: #999; }
+::-moz-placeholder { color: #999; }
+:-ms-input-placeholder { color: #999; }
+:-moz-placeholder { color: #999; }
+
+body.login-page main .login-form label,
+body.dashboard-page main .dashboard label,
+body.track-page main .track-issues label {
+    color: #333;
+}

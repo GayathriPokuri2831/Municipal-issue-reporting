@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CityConnect - Report Issue</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>CityConnect</h1>
+            <nav>
+                <a href="home.html">Home</a>
+                <a href="report.html">Report Issue</a>
+                <a href="track.html">Track Issues</a>
+                <a href="#">Admin</a>
+                <button id="logoutBtn" class="report-btn">Logout</button>
+            </nav>
+        </header>
+        
+        <main>
+            <section class="report-form">
+                <h2>Report New Issue</h2>
+                <form id="issueForm">
+                    <div class="form-group">
+                        <label for="issueType">Issue Type</label>
+                        <select id="issueType" required>
+                            <option value="">Select type...</option>
+                            <option value="Pothole">Pothole</option>
+                            <option value="Streetlight">Streetlight</option>
+                            <option value="Garbage">Garbage Collection</option>
+                            <option value="Graffiti">Graffiti</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="location">Location</label>
+                        <input type="text" id="location" placeholder="Enter address or description" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="description">Description</label>
+                        <textarea id="description" placeholder="Describe the issue..." rows="3" required></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Photos</label>
+                        <label class="photo-upload">
+                            <span>Add Photos</span>
+                            <input type="file" id="photoUpload" accept="image/*" multiple>
+                        </label>
+                        <span class="photo-limit">Up to 5 photos</span>
+                        <div id="photoPreviews" class="photo-previews"></div>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">Submit Report</button>
+                </form>
+            </section>
+
+            <section class="recent-reports" id="adminSection" style="display: none;">
+                <h2>Recent Reports (Admin View)</h2>
+                <div id="issuesList" class="issues-list"></div>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

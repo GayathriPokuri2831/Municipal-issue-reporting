@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Municipal Issue Report - Track Your Issue</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <span class="ghmc">GHMC</span>
+            <h1>Municipal Issue Report</h1>
+            <nav>
+                <a href="index.html">Home</a>
+            </nav>
+        </header>
+        
+        <main>
+            <section class="citizen-track">
+                <h2>Track Your Issue</h2>
+                <div class="form-group">
+                    <label for="applicationIdInput">Enter Application ID</label>
+                    <input type="text" id="applicationIdInput" placeholder="e.g., APP-123456">
+                    <button id="trackBtn" class="submit-btn">Track</button>
+                </div>
+                <div id="issueDetails" class="issues-list"></div>
+                <div id="feedbackForm" class="feedback-form" style="display: none;">
+                    <h3>Provide Feedback</h3>
+                    <textarea id="feedbackInput" placeholder="Enter your feedback here..." rows="3"></textarea>
+                    <button id="submitFeedbackBtn" class="submit-btn">Submit Feedback</button>
+                </div>
+                <p id="trackError" class="error-message"></p>
+                <p id="feedbackSuccess" class="success-message" style="display: none;">Feedback submitted successfully!</p>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Municipal Issue Report - Admin Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="dashboard-page">
+    <div class="container">
+        <header>
+            <span class="ghmc">GHMC</span>
+            <h1>Municipal Issue Report</h1>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="track.html">Track Issues</a>
+                <button id="logoutBtn" class="logout-btn">Logout</button>
+            </nav>
+        </header>
+        
+        <main>
+            <section class="dashboard">
+                <h2>Admin Dashboard - Reported Issues</h2>
+                <button id="clearIssuesBtn" class="clear-btn">Clear All Issues</button>
+                <div id="issuesList" class="issues-list"></div>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

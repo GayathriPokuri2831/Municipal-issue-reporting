@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Municipal Issue Report - Home</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Include Font Awesome for icons (optional, for local use, download or use CDN) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <span class="ghmc">GHMC</span>
+            <h1>Municipal Issue Report</h1>
+            <nav>
+                <a href="#">Home</a>
+                <a href="citizen-track.html">Track Your Issue</a>
+                <a href="login.html">Admin Login</a>
+            </nav>
+        </header>
+        
+        <main>
+            <section class="hero">
+                <h2>Make Your City Better Together</h2>
+                <p>Report issues, track progress, and help improve your community. Join thousands of citizens making a difference.</p>
+                <button class="report-btn" onclick="window.location.href='#report-form'">Report an Issue</button>
+            </section>
+
+            <section class="stats">
+                <div class="stat-card">
+                    <i class="fas fa-check-circle"></i>
+                    <h3>2,500+</h3>
+                    <p>Issues Resolved</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-users"></i>
+                    <h3>10,000+</h3>
+                    <p>Active Users</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-clock"></i>
+                    <h3>48 hours</h3>
+                    <p>Avg. Response Time</p>
+                </div>
+            </section>
+
+            <section class="report-form" id="report-form">
+                <h2>Hyderabad Municipality Department</h2>
+                <form id="issueForm">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" placeholder="Enter your name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="issueType">Issue Type</label>
+                        <select id="issueType" required>
+                            <option value="">Select type...</option>
+                            <option value="Pothole">Pothole</option>
+                            <option value="Streetlight">Streetlight</option>
+                            <option value="Garbage">Garbage Collection</option>
+                            <option value="Graffiti">Graffiti</option>
+                            <option value="Water Leakage">Water Leakage</option>
+                            <option value="Road Blockage">Road Blockage</option>
+                            <option value="Noise Pollution">Noise Pollution</option>
+                            <option value="Illegal Dumping">Illegal Dumping</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="location">Location</label>
+                        <input type="text" id="location" placeholder="Enter address or description" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="description">Description</label>
+                        <textarea id="description" placeholder="Describe the issue..." rows="3" required></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" placeholder="Enter your phone number" pattern="[0-9]{10}" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email ID</label>
+                        <input type="email" id="email" placeholder="Enter your email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Photos</label>
+                        <label class="photo-upload">
+                            <span>Add Photos</span>
+                            <input type="file" id="photoUpload" accept="image/*" multiple>
+                        </label>
+                        <span class="photo-limit">Up to 5 photos</span>
+                        <div id="photoPreviews" class="photo-previews"></div>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">Submit Report</button>
+                </form>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

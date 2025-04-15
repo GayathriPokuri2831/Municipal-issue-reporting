@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Municipal Issue Report - Track Issues</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="track-page">
+    <div class="container">
+        <header>
+            <span class="ghmc">GHMC</span>
+            <h1>Municipal Issue Report</h1>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="dashboard.html">Dashboard</a>
+                <button id="logoutBtn" class="logout-btn">Logout</button>
+            </nav>
+        </header>
+        
+        <main>
+            <section class="track-issues">
+                <h2>Track Issues</h2>
+                <div class="filter-search">
+                    <div class="form-group">
+                        <label for="statusFilter">Filter by Status</label>
+                        <select id="statusFilter">
+                            <option value="all">All</option>
+                            <option value="pending">Pending</option>
+                            <option value="in-progress">In Progress</option>
+                            <option value="resolved">Done</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="searchInput">Search Issues</label>
+                        <input type="text" id="searchInput" placeholder="Search by type, location, or description">
+                    </div>
+                </div>
+                <div id="trackIssuesList" class="issues-list"></div>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
